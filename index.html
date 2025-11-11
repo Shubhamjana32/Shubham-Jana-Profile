@@ -142,14 +142,40 @@
         <!-- CONTENT SECTIONS -->
         <main id="content-container">
 
-            <!-- 1. ABOUT SECTION (Now empty, content is in header) -->
-            <section id="tab-about" class="tab-content hidden"></section>
-
-            <!-- 2. PROJECTS SECTION (Formerly "Work") -->
+            <!-- 1. PROJECTS SECTION -->
             <section id="tab-projects" class="tab-content">
                 <h2 class="text-3xl font-bold mb-6 border-b border-indigo-500 pb-2 text-glow-hover">Selected Projects</h2>
                 <div class="space-y-8">
-                    <!-- Project 1: Zero-Server Todo App -->
+
+                    <!-- NEW PROJECT 1: Privacy-First Personal Finance Dashboard -->
+                    <div class="p-6 bg-gray-800 rounded-xl shadow-2xl border border-gray-700 interactive-card">
+                        <h3 class="text-2xl font-bold text-indigo-400 mb-3 flex items-center text-glow-hover"><i data-lucide="shield-half" class="h-5 w-5 mr-2"></i> Privacy-First Personal Finance Dashboard</h3>
+                        <p class="text-gray-400 mb-4 text-glow-hover">A fully responsive, Zero-Server web application using pure HTML, Tailwind, and Vanilla JavaScript. All financial data is stored exclusively in **Client-Side Local Storage**, ensuring 100% data confidentiality and zero server maintenance cost. Features robust client-side state management, including complex debt settlement logic.</p>
+                        <div class="flex flex-wrap gap-4 mt-4">
+                            <a href="https://lnkd.in/gHC25cva" target="_blank" class="text-sm inline-flex items-center text-yellow-400 hover:text-yellow-300 transition-colors text-glow-hover font-semibold">
+                                <i data-lucide="external-link" class="h-4 w-4 mr-1"></i> Live App
+                            </a>
+                            <a href="https://lnkd.in/g-ED_G9F" target="_blank" class="text-sm inline-flex items-center text-yellow-400 hover:text-yellow-300 transition-colors text-glow-hover font-semibold">
+                                <i data-lucide="github" class="h-4 w-4 mr-1"></i> Source Code
+                            </a>
+                        </div>
+                        <div class="mt-4">
+                            <h4 class="text-lg font-semibold mb-2 text-white text-glow-hover">Core Logic Snippet (Client-Side Storage)</h4>
+                            <pre class="code-block">
+<span class="code-comment">// Function to securely load financial data from Local Storage (Privacy-First)</span>
+<span class="code-function">const</span> <span class="code-variable">loadFinancialData</span> = () => {
+<span class="code-variable">const</span> <span class="code-variable">data</span> = <span class="code-keyword">localStorage</span>.<span class="code-function">getItem</span>(<span class="code-string">'finance_dashboard_data'</span>);
+<span class="code-keyword">if</span> (<span class="code-variable">data</span>) {
+<span class="code-keyword">return</span> <span class="code-function">JSON</span>.<span class="code-function">parse</span>(<span class="code-variable">data</span>);
+}
+<span class="code-keyword">return</span> { <span class="code-variable">transactions</span>: [], <span class="code-variable">debts</span>: [] };
+};
+<span class="code-comment">// Data never leaves the browser, eliminating server breach risk.</span>
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- Existing Project 2: Zero-Server Todo App -->
                     <div class="p-6 bg-gray-800 rounded-xl shadow-2xl border border-gray-700 interactive-card">
                         <h3 class="text-2xl font-bold text-indigo-400 mb-3 flex items-center text-glow-hover"><i data-lucide="list-checks" class="h-5 w-5 mr-2"></i> Zero-Server Todo Manager</h3>
                         <p class="text-gray-400 mb-4 text-glow-hover">A complete full-stack-like application built entirely on the client-side using IndexedDB for persistent storage. Demonstrates Zero-Server Architecture principles.</p>
@@ -170,7 +196,7 @@
                             </pre>
                         </div>
                     </div>
-                    <!-- Project 2: Tailwind Responsive Layout -->
+                    <!-- Existing Project 3: Tailwind Responsive Layout -->
                     <div class="p-6 bg-gray-800 rounded-xl shadow-2xl border border-gray-700 interactive-card">
                         <h3 class="text-2xl font-bold text-indigo-400 mb-3 flex items-center text-glow-hover"><i data-lucide="layout-grid" class="h-5 w-5 mr-2"></i> Modern Responsive Dashboard UI</h3>
                         <p class="text-gray-400 mb-4 text-glow-hover">Focus on complex, responsive layout design using pure Tailwind CSS for multiple breakpoints (mobile, tablet, desktop).</p>
